@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+					    	http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd">
+	<bean id="collection" class="com.trent.bean.Collection">
+		<property name="arrays" >
+			<array>
+				<value>565</value>
+				<value>789</value>
+				<value>123</value>
+			</array>
+		</property>
+		<property name="list">
+			<list>
+				<value>形成农户</value>
+				<value>形成农户</value>
+				<value>形成农户</value>
+				<value>形成农户</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="dd" value="dfs"></entry>
+				<entry key="dd1" value="dfs"></entry>
+				<entry key="dd2" value="dfs"></entry>
+				<entry key="dd3" value="dfs"></entry>
+			</map>
+		</property>
+		<property name="sets" >
+			<set>
+				 <value>fdgfd</value>
+				 <value>fdgfdf</value>
+				 <value>fdgfdf</value>
+			</set>
+		</property>
+
+		<property name="personList" >
+			<list>
+				<ref bean="person1" />
+				<ref bean="person2"/>
+				<ref bean="person3"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="person1" class="com.trent.bean.Person">
+		<constructor-arg value="dd"></constructor-arg>
+	</bean>
+	<bean id="person2" class="com.trent.bean.Person">
+		<constructor-arg value="dd"></constructor-arg>
+	</bean>
+	<bean id="person3" class="com.trent.bean.Person">
+		<constructor-arg value="dd"></constructor-arg>
+	</bean>
+
+	<util:list id="lisss">
+		<value>fdfdf</value>
+		<value>fdfdf</value>
+		<value>fdfdf</value>
+		<value>fdfdf</value>
+		<value>fdfdf</value>
+	</util:list>
+
+	<bean id="cc" class="com.trent.bean.Collection">
+		<property name="list" ref="lisss"></property>
+	</bean>
+</beans>
