@@ -7,12 +7,17 @@ version '6.0.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {url "https://maven.aliyun.com/repository/public"}
 }
 
 dependencies {
     api(project(":spring-context"))
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'com.alibaba', name: 'druid', version: '1.2.11'
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit5
+    testImplementation group: 'org.jetbrains.kotlin', name: 'kotlin-test-junit5', version: '1.7.0'
+
 }
 
 test {

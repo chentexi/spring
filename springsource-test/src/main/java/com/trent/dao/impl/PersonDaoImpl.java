@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class PersonDaoImpl implements PersonDao{
+	//@Resource
+	//private Jdbctemplate
 	@Override
 	public void add(){
 		System.out.println("add...");

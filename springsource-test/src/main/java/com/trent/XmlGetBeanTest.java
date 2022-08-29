@@ -1,7 +1,6 @@
 package com.trent;
 
 import com.trent.bean.Person;
-import com.trent.service.PersonService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
