@@ -8,4 +8,5 @@ package com.trent.service;
  */
 public interface PersonService{
 	void test();
+	String getName(String name);
 }

@@ -24,7 +24,7 @@ public class FluxTest{
 		List<Integer> f= Arrays.asList(1,2,3,4,5,6,7,9);
 		Flux.fromIterable(f);
 		
-		Stream stream=f.stream();
+		Stream<Integer> stream=f.stream();
 		Flux.fromStream(stream);
 	}
 }

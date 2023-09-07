@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class AopTest{
 	public static void main(String[] args){
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("acpectJ.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("aspectJ.xml");
 		SysLogin sysLogin = context.getBean("sysLogin", SysLogin.class);
 		sysLogin.login("2","3");
 	}

@@ -1,11 +1,14 @@
 package com.trent.bean;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @Author: Trent
  * @Date: 2022/8/25 4:06
  * @program: spring
  * @Description:
  */
+@Component
 public class Person{
 	private String name;
 	
@@ -28,8 +31,8 @@ public class Person{
 		this.name = name;
 	}
 	
-	//@Override
-	//public String toString(){
-	//	return "\'Person\':{" + "\'name\':\'" + name + '\'' + "," + "\'dept\':" + dept + '}';
-	//}
+	@Override
+	public String toString(){
+		return "\'Person\':{" + "\'name\':\'" + name + '\'' + "," + "\'dept\':" + dept + '}';
+	}
 }

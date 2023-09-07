@@ -2,7 +2,6 @@ package com.trent.service.impl;
 
 import com.trent.dao.PersonDao;
 import com.trent.service.PersonService;
-import org.springframework.stereotype.Service;
 
 /**
  * @Author: Trent
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Service;
  * @program: spring
  * @Description:
  */
-@Service
 public class PersonServiceImpl implements PersonService{
 	
 	private PersonDao personDao;
@@ -22,5 +20,16 @@ public class PersonServiceImpl implements PersonService{
 		
 		System.out.println("test....");
 		personDao.add();
+	}
+	private String name;
+	@Override
+	public String getName(String name2){
+		name="dvnusdb:"+name2;
+		try{
+			Thread.sleep(100);
+		}catch( InterruptedException e ){
+			throw new RuntimeException(e);
+		}
+		return name;
 	}
 }
